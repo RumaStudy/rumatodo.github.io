@@ -7,6 +7,7 @@ const inputSide = doc.getElementById("get_ID_place"),
 function changer(e) {
   e.preventDefault();
   if (inputSide.value.length === 0) {
+    firstFace.classList.remove("fade");
     console.log(inputSide.value.length);
     alert("별명을 입력해주세요.");
     hider();
@@ -26,6 +27,7 @@ function init() {
     sh.classList.remove("on");
     place.innerText = "";
     inputSide.value = "";
+    firstFace.classList.remove("fade");
   } else {
     place.innerText = `${loadData} 님!`;
     appearer();
