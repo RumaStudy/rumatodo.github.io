@@ -64,6 +64,7 @@ function makingDesc(whereDiv) {
   }
   putterAction(memoPutter);
   putterAction(titlePutter);
+
   /* input 부분 제작 */
   inputPlacer.append(titlePutter);
   inputPlacer.append(titleConfirmer);
@@ -73,7 +74,12 @@ function makingDesc(whereDiv) {
   whereDiv.append(checkerBtn);
   whereDiv.append(inputPlacer);
 }
-
-/** 삭제 버튼 */
-
-/** 체크 버튼 */
+const clearBtn = doc.getElementById("clearer"); // Clear 버튼
+/** Clear 버튼 함수 */
+function scheClear() {
+  const sches = doc.querySelectorAll("#add_place > .added");
+  sches.forEach((schsNum) => {
+    schsNum.remove();
+  });
+}
+clearBtn.addEventListener("click", scheClear);
