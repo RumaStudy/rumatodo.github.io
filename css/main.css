@@ -7,11 +7,23 @@
   transition: 1850ms;
 }
 .wrap > .main_content {
+  position: relative;
   width: 100%;
   height: 100%;
   display: grid;
   column-gap: 3rem;
   grid-template-columns: 1fr 5fr;
+}
+.main_logos {
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  right: 5rem;
+  bottom: 13rem;
+  background-image: url(../img/logo/logo.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 /* Side Bar */
 aside {
@@ -41,6 +53,7 @@ aside > .aside_bg > .head {
   font-family: "Akaya Kanadaka", cursive;
   font-weight: 400;
 }
+/* Aside Main */
 aside > .aside_bg > .body {
   width: 100%;
   height: calc(100% - 100px);
@@ -71,10 +84,7 @@ aside > .aside_bg > .body {
   border: 3px solid #fff;
   color: white;
 }
-#reseter {
-}
-#clearer {
-}
+/* Weather Content */
 .weather_info {
   width: calc(100% - 4rem);
   height: 150px;
@@ -133,6 +143,7 @@ main {
   width: 100%;
   height: 100%;
 }
+/* Main Head */
 main > .title {
   padding: 1rem 0;
   border-radius: 45px 0 0 45px;
@@ -146,13 +157,20 @@ main > .title {
 }
 .title > p {
   font-size: 24px;
+  -webkit-text-stroke: 1px rgba(2, 7, 21, 0.35);
+  font-weight: 600;
+  font-family: Gmarket Sans TTF;
 }
 .title > .placefordata {
   height: 64px;
   font-size: 48px;
+  -webkit-text-stroke: 1px rgba(2, 7, 21, 0.35);
+  font-weight: 800;
+  font-family: Gmarket Sans TTF;
 }
+/* Main Body */
 main > .main_content {
-  padding: 3rem;
+  padding: 2rem 3rem;
   margin-top: 3rem;
   margin-right: 3rem;
   height: 100%;
@@ -163,20 +181,123 @@ main > .main_content {
   backdrop-filter: blur(2.5px);
   transition: 2050ms;
 }
+/* Schedule Head */
 .add_schezule {
-  padding: 1rem;
+  padding: 0.7rem 1rem;
+  border: 3px solid var(--point1);
+  border-radius: 20px;
   margin: 1rem;
+  font-family: Gmarket Sans TTF;
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: var(--point1);
+  background-color: #fff;
+  transition: 550ms;
+  cursor: pointer;
+}
+.add_schezule:hover {
+  background-color: var(--point1);
+  color: white;
+  border: 3px solid #fff;
+}
+/* Schedule Body */
+#add_place {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: ". ." ". ." ". .";
 }
 #add_place > div {
-  width: 300px;
+  display: flex;
+  flex-direction: row-reverse;
+  width: 650px;
   height: 100px;
-  border: 1px solid #000;
-  line-height: 100px;
+  padding: 0.5rem;
+  border-radius: 30px;
+  margin: 1rem auto 2rem;
   text-align: center;
   transition: 550ms;
   animation-name: ani;
   animation-duration: 550ms;
   animation-fill-mode: forwards;
+  background-color: #fff;
+}
+#add_place > div > button {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  background: none;
+  border: none;
+  margin: 0 1rem;
+  cursor: pointer;
+}
+#add_place > div > .checker {
+  background-image: url(../img/listbtn/check_checked.png);
+  transition: 550ms;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+#add_place > div > .checker:hover {
+  background-image: url(../img/listbtn/check_none.png);
+  transition: 550ms;
+}
+#add_place > div > .remover {
+  background-image: url(../img/listbtn/bin_checked.png);
+  transition: 550ms;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+#add_place > div > .remover:hover {
+  background-image: url(../img/listbtn/bin_none.png);
+  transition: 550ms;
+}
+#add_place > div > .checker.checked {
+  background-image: url(../img/listbtn/check_none.png);
+}
+#add_place > div > .checker.checked:hover {
+  background-image: url(../img/listbtn/check_checked.png);
+}
+/* input Place */
+.sche_place {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 2rem;
+}
+.sche_place > input {
+  font-size: 1rem;
+  padding: 0.5rem;
+  margin-bottom: 0.4rem;
+  transition: 550ms;
+}
+.sche_place > input:nth-child(3) {
+  margin-top: -1.3rem;
+}
+.sche_place > input::placeholder {
+  color: var(--point1);
+}
+.sche_place > input:focus {
+  border: 1px solid var(--point1);
+}
+.sche_place > label {
+  display: block;
+  font-size: 1.3rem;
+  width: 90%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 300px;
+}
+.sche_place > label:nth-child(2) {
+  font-size: 1.3rem;
+  font-weight: 700;
+  font-family: Gmarket Sans TTF;
+  margin: 1rem 0 0.5rem;
+}
+.sche_place > label:nth-child(4) {
+  font-size: 0.8rem;
+  font-weight: 600;
 }
 @keyframes ani {
   from {
@@ -188,6 +309,7 @@ main > .main_content {
     transform: translateY(0);
   }
 }
+/* Hide And Show Class */
 aside.hide {
   opacity: 0;
   transform: translateX(-200%);
