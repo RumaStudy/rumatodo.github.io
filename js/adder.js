@@ -6,7 +6,6 @@ addBtn.addEventListener("click", () => {
   const hasAdded = doc.createElement("div");
   hasAdded.classList.add("added");
   const scheNum = addPlace.querySelectorAll(".added");
-  console.log(scheNum.length);
   if (scheNum.length >= 5) {
     alert("일정은 다섯개까지만! 쉬엄쉬엄해요 우리");
   } else {
@@ -57,7 +56,6 @@ function makingDesc(whereDiv) {
       if (textInput.length === 0) {
       } else {
         nextLabel.innerText = textInput;
-        console.log(nextLabel);
         e.target.style.display = "none";
       }
     });
