@@ -55,6 +55,7 @@ function makingDesc(whereDiv) {
       const nextLabel = e.target.nextElementSibling;
       if (textInput.length === 0) {
       } else {
+        nextLabel.style.display = "block";
         nextLabel.innerText = textInput;
         e.target.style.display = "none";
       }
