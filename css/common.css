@@ -1,0 +1,45 @@
+@charset "UTF-8";
+/* Root Variable Set Up */
+:root {
+  --point1: #99ccff;
+  --point2: #99ffee;
+}
+/* Font Set-Up */
+/* Web Font - Google Font - Akaya Kanadaka */
+@import url("https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&display=swap");
+/* font-family: 'Akaya Kanadaka', cursive; */
+
+/* Web Font - Google Font - Dosis */
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap");
+/* font-family: 'Dosis', sans-serif; */
+
+/* CSS RESET */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+a {
+  text-decoration: none;
+}
+ul,
+ol,
+li,
+dl,
+dt,
+dd {
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 1rem;
+  font-weight: normal;
+}
