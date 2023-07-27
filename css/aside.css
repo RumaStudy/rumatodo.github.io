@@ -60,14 +60,14 @@ aside > .aside_bg > .body {
 /* Weather Content */
 .weather_info {
   width: calc(100% - 4rem);
-  height: 400px;
+  height: 350px;
   padding: 0 3rem;
   margin: 2rem auto 0;
   border-radius: 30px;
   background: linear-gradient(165deg, #9fe 0%, #9cf 100%);
 }
 #date {
-  padding: 2rem 0 1rem;
+  padding: 2rem 0 0;
 }
 #date > p {
   width: 100%;
@@ -94,12 +94,14 @@ aside > .aside_bg > .body {
   text-align: center;
   font-size: 1.7rem;
 }
+.temp_place {
+  width: 8rem;
+  margin: auto;
+}
 #temper {
   display: inline-block;
   width: 4.5rem;
   text-align: center;
-  margin: auto;
-  margin-left: 1rem;
   font-size: 3rem;
   font-family: "Dosis", sans-serif;
   -webkit-text-stroke: 1px rgba(2, 7, 21, 0.35);
@@ -109,7 +111,6 @@ aside > .aside_bg > .body {
   display: inline-block;
   width: 3rem;
   text-align: center;
-  margin: auto;
   font-size: 2.3rem;
   color: white;
   font-family: "Dosis", sans-serif;
@@ -127,7 +128,7 @@ aside > .aside_bg > .body {
   display: block;
   width: 100px;
   height: 100px;
-  margin: 1rem auto 2rem;
+  margin: 1rem auto;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
