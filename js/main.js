@@ -11,7 +11,7 @@ const bgArray = [
 ];
 /** 현재 배경 확인용 변수 */
 let currentBG = "";
-const bgPlace = doc.querySelector(".wrap"); // 배경 넣을 곳
+const bgPlace = doc.querySelector("#bg"); // 배경 넣을 곳
 /** 시작 시 랜덤 배경 지정 */
 function initialize() {
   let randomize = Math.floor(Math.random() * bgArray.length);
